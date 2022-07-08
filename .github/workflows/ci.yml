@@ -1,0 +1,24 @@
+name: Cypress E2E concurrent
+
+on: [push]
+
+jobs:
+    cypress-concurrent:
+        runs-on: ubuntu-latest
+
+        strategy:
+            fail-fast: false
+            matrix:
+                containers: [1, 2, 3]
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: "14"
+
+            - name: install
+              run: npm i
+
+            - name: Run
+              run: npm run cy:para
