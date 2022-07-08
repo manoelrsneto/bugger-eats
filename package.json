@@ -1,7 +1,11 @@
 {
-  "devDependencies": {
-    "cypress": "^9.6.1",
-    "eslint": "^8.15.0",
-    "eslint-plugin-cypress": "^2.12.1"
-  }
+    "scripts": {
+        "cy:para": "CYPRESS_API_URL='https://mrsn-sc.herokuapp.com/' cy2 run --parallel --record --key somekey --ci-build-id para-${GITHUB_SHA:-local}"
+    },
+    "devDependencies": {
+        "cy2": "^2.0.0",
+        "cypress": "^9.6.1",
+        "eslint": "^8.15.0",
+        "eslint-plugin-cypress": "^2.12.1"
+    }
 }
