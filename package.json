@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "cy:para": "CYPRESS_API_URL='https://mrsn-sc.herokuapp.com/' cy2 run --parallel --record --key somekey"
+        "cy:para": "CYPRESS_API_URL='https://mrsn-director.herokuapp.com/' cy2 run --parallel --record --key somekey --ci-build-id para-${GITHUB_SHA:-local}"
     },
     "devDependencies": {
         "cy2": "^2.0.0",
