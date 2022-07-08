@@ -1,3 +1,4 @@
 {
-    "baseUrl": "https://buger-eats.vercel.app/"
+    "baseUrl": "https://buger-eats.vercel.app/",
+    "projectId": "bugger-eats"
 }
